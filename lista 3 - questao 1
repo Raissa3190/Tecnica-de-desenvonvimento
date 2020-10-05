@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+
+int main(){
+	
+	char nome1[50], nome2[50];
+	int i, j;
+	
+	
+	printf("Digite primeiro nome: ");
+	scanf("%s", &nome1);
+	for(i=0; nome1[i]!='\0'; ++i){
+		
+		nome2[i] = nome1[i];
+		
+	}
+	nome2[i] ='\0';
+		printf("O nome copiado foi: %s", nome2);
+	
+	
+	
+	return 0;
+}
