@@ -1,0 +1,38 @@
+#include <stdio.h>
+#include <string.h>
+
+
+
+int main(){
+	
+	char palavra[70], novapalavra[70];
+	int i , j, tam;
+	
+	
+	printf("\n Digite a palavra: \n");
+	scanf("%s", &palavra);
+	
+	tam= strlen(palavra);      //Associando a variavel tam ao comprimento da string.
+	strcpy(novapalavra, palavra);    //Copiando o conteudo de uma string para outra.
+	
+	
+	j=tam -1;   //Atribuindo o valor J para o final da cadeia de caracter.
+	
+	for(i=0; i<j ; ++i){      // Lendo a cadeia de forma crescente.
+		
+		while(palavra[i]!= novapalavra[j]){   //Comparando se o primeiro indice da palavra é diferente do ultimo indice de nova palavra .
+			
+			printf("\n Nao e Palindromo. \n");
+			return 1;
+			
+		}
+		
+		--j;
+		
+	}
+	
+	printf("\n E Palindromo. \n");     
+		
+
+	
+}
