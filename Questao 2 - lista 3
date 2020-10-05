@@ -1,0 +1,32 @@
+#include<stdio.h>
+
+
+
+int main(){
+	
+	char palavra1[50], palavra2[50];
+	int i=0;
+	
+	printf("\n Digite primeira palavra a ser comparada: ");
+	scanf("%s", &palavra1);
+	printf("\n Digite a segunda palavra a ser comparada: ");
+	scanf("%s", &palavra2);
+	
+	
+		if(palavra1[i]==palavra2[i]){
+			
+		printf("\n Sao iguais.");
+			
+		return 0;
+		
+		
+		
+		}else{
+		
+		printf("\n Nao sao iguais.");
+		
+		return 1;
+		}
+	
+	
+}
