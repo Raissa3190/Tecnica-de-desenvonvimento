@@ -1,0 +1,33 @@
+#include<stdio.h>
+#include <string.h>
+#include <stdlib.h>
+
+
+int main(){
+	
+	int m, n, soma=0, i;
+	char aux[50];
+	scanf("%d %d", &m,&n);
+	
+	while(m!=0 && n!=0){
+		
+		soma=m+n;
+		
+		sprintf(aux, "%d", soma);
+		
+		for(i=0;i<strlen(aux);++i){
+			if(aux[i] !='0'){
+				
+				printf("%c", aux[i]);
+			}
+		}
+		break;
+	}if(m=n=0){
+		
+		printf("/n");
+	}
+	
+
+	
+	return 0;
+}
