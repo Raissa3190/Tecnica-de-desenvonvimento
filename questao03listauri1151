@@ -1,0 +1,20 @@
+#include <stdio.h>
+ 
+int main() {
+ 
+    int a=0, b=1;
+    int n, i, aux;
+    
+    scanf("%d\n",&n);
+	  printf("0-1");
+    
+	  for(i=0; i<n;i++){
+		aux= b+a;
+		printf("-%d", aux);
+		a=b;
+		b=aux;
+		
+	}
+	
+    return 0;
+}
