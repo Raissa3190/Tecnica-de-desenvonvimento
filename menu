@@ -1,0 +1,92 @@
+#include<stdio.h>
+
+
+
+/*Crie um Menu. O menu deverá ter opções quaisquer de 1 a 9, se o usuário digitar algum número entre 1 e 9, o programa deverá reexibir o menu.
+
+Caso o usuário digitar qualquer outro número, com exceção do 0, o programa deve informar que a opção desejada é inexistente.
+
+E por fim, caso o usuário digitar 0, o programa deve exibir mensagem de despedida e terminar sua execução.
+*/
+
+int menu(int op){	
+	
+	
+	printf("Digite uma das opcoes: \n");
+	printf("1 - Torta \n");
+	printf("2 - Sorvete \n");
+	printf("3 - Hamburguer \n");
+	printf("4 - Pastel \n");
+	printf("5 - Almoco \n");
+	printf("6 - Jantar \n");
+	printf("7 - Sobremesa \n");
+	printf("8 - Bebidas \n");
+	printf("9 - Paes \n");
+	printf("0 - Encerrar Programa \n");
+	scanf("%d", &op);
+	
+
+	return op;
+}
+
+int main(){
+	
+	int op;
+	
+
+
+
+	switch(menu(op)){
+		
+		case 1:
+			menu(op);
+			break;
+			
+		case 2:
+			menu(op);
+			break;
+			
+		case 3:
+			menu(op);
+			break;
+			
+		case 4:
+			menu(op);
+			break;
+			
+		case 5:
+			menu(op);
+			break;
+			
+		case 6:
+			menu(op);
+			break;
+			
+		case 7:
+			menu(op);
+			break;
+			
+		case 8:
+			menu(op);
+			break;
+			
+		case 9:
+			menu(op);
+			break;
+
+		case 0:
+			printf(" Seu programa foi encerrado Obrigada.");
+			break;
+			
+		default: 
+			printf("\n Opcao Inexistente.");
+			break;
+	}
+
+
+
+	
+
+	
+	return 0;
+}
