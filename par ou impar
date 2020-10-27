@@ -1,0 +1,26 @@
+#include<stdio.h>
+
+
+//Faça um programa que leia um número e diga se esse número é par ou não.
+
+int main(){
+	
+	
+	int numero=0, r;
+	
+	
+	printf("Digite um numero para verificar se é par ou impar: \n");
+	scanf("%d", &numero);
+	
+	r=numero%2;
+	
+	if(r==0){
+		printf("O numero e Par. \n");
+	}else{
+		
+		printf("E Impar.");
+	}
+	
+	
+	return 0;
+}
