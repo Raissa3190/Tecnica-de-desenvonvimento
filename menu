@@ -9,82 +9,84 @@ Caso o usuário digitar qualquer outro número, com exceção do 0, o programa d
 E por fim, caso o usuário digitar 0, o programa deve exibir mensagem de despedida e terminar sua execução.
 */
 
-int menu(int op){	
-	
-	
-	printf("Digite uma das opcoes: \n");
-	printf("1 - Torta \n");
-	printf("2 - Sorvete \n");
-	printf("3 - Hamburguer \n");
-	printf("4 - Pastel \n");
-	printf("5 - Almoco \n");
-	printf("6 - Jantar \n");
-	printf("7 - Sobremesa \n");
-	printf("8 - Bebidas \n");
-	printf("9 - Paes \n");
-	printf("0 - Encerrar Programa \n");
-	scanf("%d", &op);
-	
-
-	return op;
-}
-
-int main(){
-	
-	int op;
-	
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 
 
-
-	switch(menu(op)){
+int main(void){
+	
+	int op = -1, posicao = 0, retorno;
+	
+	do{
+		printf("       Cardapio        \n");
 		
-		case 1:
-			menu(op);
-			break;
+		printf("1 - Torta \n");
+		printf("2 - Sorvete \n");
+		printf("3 - Hamburguer \n");
+		printf("4 - Pastel \n");
+		printf("5 - Almoco \n");
+		printf("6 - Jantar \n");
+		printf("7 - Sobremesa \n");
+		printf("8 - Bebidas \n");
+		printf("9 - Paes \n");
+		printf("0 - Encerrar Programa \n");
+		
+		scanf("%d", &op);
+		
+		switch(op){
 			
-		case 2:
-			menu(op);
-			break;
-			
-		case 3:
-			menu(op);
-			break;
-			
-		case 4:
-			menu(op);
-			break;
-			
-		case 5:
-			menu(op);
-			break;
-			
-		case 6:
-			menu(op);
-			break;
-			
-		case 7:
-			menu(op);
-			break;
-			
-		case 8:
-			menu(op);
-			break;
-			
-		case 9:
-			menu(op);
-			break;
+			case 0:
+				system("cls");
+				printf("Fim do Programa.");
+				break;
+				
+			case 1:
+				system("cls");
+				break;
+				
+			case 2:
+				system("cls");
+				break;
+				
+			case 3:
+				system("cls");
+				break;
+				
+				
+			case 4:
+				system("cls");
+				break;
+				
+			case 5:
+				system("cls");
+				break;
+				
+			case 6:
+				system("cls");
+				break;
+				
+			case 7:
+				system("cls");
+				break;
+				
+			case 8:
+				system("cls");
+				break;
+				
+			case 9:
+				system("cls");
+				break;
+				
+			default:
+				system("cls");
+				if(op!=0){
+					printf("Opcao Invalida.");
+					break;
+				}
+		}
 
-		case 0:
-			printf(" Seu programa foi encerrado Obrigada.");
-			break;
-			
-		default: 
-			printf("\n Opcao Inexistente.");
-			break;
-	}
-
-
-
+	}while(op!=0);
 	
 
 	
