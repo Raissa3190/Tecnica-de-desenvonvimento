@@ -1,0 +1,179 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+
+
+struct conta{
+	int numero, valor, senha;
+	
+}conta[100];
+
+int criar_conta(int indice);
+void deposito();
+void saque();
+void saldo();
+
+int main(void){
+	
+	int op = -1, posicao = 0, retorno;
+	
+	do{
+		printf("       Banco        \n");
+		printf("1 - Criar Conta \n");
+		printf("2 - Saldo \n");
+		printf("3 - Deposito \n");
+		printf("4 - Saque \n");
+		printf("0 - Sair\n");
+		
+		scanf("%d", &op);
+		
+		switch(op){
+			
+			case 0:
+				system("cls");
+				printf("Fim do Programa.");
+				break;
+				
+			case 1:
+				system("cls");
+				criar_conta(posicao);
+				if(retorno == 0){
+					posicao++;	
+				}
+
+				break;
+				
+			case 2:
+				system("cls");
+				saldo();
+				break;
+				
+			case 3:
+				system("cls");
+				deposito();
+				break;
+				
+				
+			case 4:
+				system("cls");
+				saque();
+				break;
+				
+			default:
+				system("cls");
+				if(op!=0){
+					printf("Opcao Invalida.");
+					break;
+				}
+		}
+
+	}while(op!=0);
+	
+	return 0;
+	
+	
+}
+
+int criar_conta(int indice){
+	int numProjeto, valorSaldo, i, valorSenha;
+	
+	printf("Digite o numero do Projeto: ");
+	scanf("%d", &numProjeto);
+	printf("Digite sua senha: ");
+	scanf("%d", &valorSenha);
+	
+	for(i=0; i<10; i++){
+		if(conta[i].numero == numProjeto){
+			printf("Numero do projeto ja existe.");
+			return 1;
+			break;
+		}else{
+			printf("Conta casdastrada!\n");
+			conta[indice].numero=numProjeto;
+		
+			conta[i].senha = valorSenha;
+			
+			return 0;
+		}
+	}
+	
+}
+
+void saldo(){
+	
+	int numProjeto, i, valorSenha;
+	
+	printf("Digite o Numero do Projeto: ");
+	scanf("%d", &numProjeto);
+	
+	printf("Digite sua senha: ");
+	scanf("%d", &valorSenha);
+	
+	
+	if(valorSenha==conta[i].senha){
+		
+		printf("Seu Saldo e : %d \n", conta[i].valor);
+		
+	}else{
+		printf("Senha Incorreta. Saldo nao disponivel \n");
+	}
+}
+
+
+void deposito(){
+	int numProjeto, valorDeposito, i, valorSenha;
+	
+	printf("Digite o Numero do Projeto: ");
+	scanf("%d", &numProjeto);
+	
+	printf("Digite sua senha: ");
+	scanf("%d", &valorSenha);
+	
+	printf("Digite o valor do Deposito:");
+	scanf("%d", &valorDeposito);
+	
+	
+	if(valorSenha==conta[i].senha){
+	
+		for(i=0; i<10; i++){
+			
+			conta[i].valor += valorDeposito;
+			
+			printf("Valor foi Depositado. Seu novo valor e : %d \n", conta[i].valor);
+			break;	
+		}
+	}else{
+		printf("Senha Incorreta. Seu valor nao foi depositado. \n");
+	}
+	
+}
+
+
+void saque(){
+	int numProjeto, valorSaque, valorSenha, i;
+	
+	printf("Digite o Numero do Projeto: ");
+	scanf("%d", &numProjeto);
+	
+	printf("Digite sua senha: ");
+	scanf("%d", &valorSenha);
+	
+	printf("Digite o valor do Saque:");
+	scanf("%d", &valorSaque);
+	
+	if(valorSenha==conta[i].senha){
+	
+		for(i=0; i<10; i++){
+			if(numProjeto==conta[i].numero){
+				conta[i].valor -= valorSaque;
+			
+				printf("Valor Sacado. O seu novo valor e : %d \n", conta[i].valor);
+				break;
+			}
+		}
+	}else{
+		printf("Senha Incorreta. Seu valor nao foi sacado. \n");
+	}
+	
+}
