@@ -16,7 +16,7 @@ E por fim, caso o usuário digitar 0, o programa deve exibir mensagem de despedi
 
 int main(void){
 	
-	int op = -1, posicao = 0, retorno;
+	int op = -1;
 	
 	do{
 		printf("       Cardapio        \n");
