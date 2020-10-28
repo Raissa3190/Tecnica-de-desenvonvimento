@@ -1,0 +1,46 @@
+#include<stdio.h>
+#include<string.h>
+
+
+/*Escreva um trecho de código em C para fazer a criação dos novos tipos de dados conforme solicitado abaixo:
+
+Horário: composto de hora, minutos e segundos.
+
+Data: composto de dia, mês e ano.
+
+Compromisso: composto de uma data, horário e texto que descreve o compromisso.
+*/
+
+
+
+struct horario{
+	int hora, minutos, segundos;
+}horario;
+	
+struct data{
+	int dia, ano;
+	int mes;
+}data;
+	
+struct compromisso{
+	char texto[150];
+}compromisso;
+
+int main(){
+	
+	printf("Digite uma hora, minutos e segundos: \n");
+	scanf("%d %d %d", &horario.hora, &horario.minutos, &horario.segundos);
+	
+	printf("Digite uma data com o dia, mes e ano:  \n");
+	scanf("%d %d %d", &data.dia, &data.mes, &data.ano);
+	
+	printf("Descreva o seu compromisso: \n");
+	fflush(stdin);
+	fgets(compromisso.texto,150,stdin);
+	
+	
+	printf("\nO seu compromisso e na seguinte hora: %dh - %dmin - %ds", horario.hora, horario.minutos, horario.segundos);
+	printf("\nA data do seu compromisso e: %d/%d/%d", data.dia, data.mes, data.ano);
+	printf("\nE o seu compromisso e sobre: %s", compromisso.texto);
+	
+}
