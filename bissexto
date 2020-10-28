@@ -1,0 +1,31 @@
+#include<stdio.h>
+
+
+/*Elabore um programa em linguagem C que receba um ano (numérico inteiro) e informe se o ano é bissexto ou não 
+(anos bissextos são múltiplos de 4, portanto, se a divisão do ano por 4 gerar resto igual a zero, o ano é bissexto - use o operador %).
+*/
+
+
+
+int main(){
+	
+	
+	int numero, r;
+	
+	
+	printf("Digite um ano para verificar se e Bissexto: \n");
+	scanf("%d", &numero);
+	
+	
+	r=numero%4;
+	
+	if(r==0){
+		printf("O ano e bissexto. \n");
+	}else{
+		
+		printf("Nao e bissexto.");
+	}
+	
+	
+	return 0;
+}
